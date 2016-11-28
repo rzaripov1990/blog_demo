@@ -1,0 +1,75 @@
+object FormMain: TFormMain
+  Left = 0
+  Top = 0
+  Caption = 'ModernListView'
+  ClientHeight = 424
+  ClientWidth = 321
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object Rectangle1: TRectangle
+    Align = MostTop
+    Fill.Color = xFF689F38
+    Sides = []
+    Size.Width = 321.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    object Label1: TLabel
+      Align = MostTop
+      AutoSize = True
+      StyledSettings = [Family, Style]
+      Margins.Left = 8.000000000000000000
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 305.000000000000000000
+      Size.Height = 31.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 25.000000000000000000
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      Text = 'Modern ListView'
+    end
+  end
+  object ListView1: TListView
+    Touch.InteractiveGestures = [Pan]
+    ItemAppearanceClassName = 'TImageListItemAppearance'
+    ItemEditAppearanceClassName = 'TImageListItemDeleteAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Client
+    Margins.Left = 8.000000000000000000
+    Margins.Right = 8.000000000000000000
+    Size.Width = 305.000000000000000000
+    Size.Height = 335.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    ItemAppearanceObjects.ItemObjects.Image.VertAlign = Leading
+    OnItemClick = ListView1ItemClick
+    SearchAlwaysOnTop = False
+  end
+  object Label2: TLabel
+    Align = Top
+    Margins.Left = 8.000000000000000000
+    Margins.Top = 8.000000000000000000
+    Margins.Right = 8.000000000000000000
+    Margins.Bottom = 8.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 58.000000000000000000
+    Size.Width = 305.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Multi Select Mode'
+    object Switch1: TSwitch
+      Align = Right
+      IsChecked = False
+      Position.X = 261.000000000000000000
+      TabOrder = 0
+      OnSwitch = Switch1Switch
+    end
+  end
+end
